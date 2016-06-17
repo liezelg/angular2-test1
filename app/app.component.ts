@@ -1,14 +1,21 @@
 import {Component} from 'angular2/core';
-import {TweetsComponent} from './tweets.component';
+import {TweetsService} from './tweets.service'
+import {TweetComponent} from './tweet.component'
 
 @Component({
     selector: 'my-app',
     template: `
-                <h1>Angular2 Tweeter Challenge</h1>                
-                <tweets></tweets>
-                `,
-    directives: [TweetsComponent]
+            <div *ngFor="#tweet of tweets">
+            <tweet [TweetData]="tweet"></tweet>
+            </div>
+        `,
+    directives: [TweetComponent],
+    providers: [TweetsService]
 })
 export class AppComponent {     
+    tweets;
     
+    constructor(tweetsService: TweetsService){
+        this.tweets = tweetsService.getTweets();
+    }
 }
