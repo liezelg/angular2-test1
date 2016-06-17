@@ -32,7 +32,7 @@ System.register(['angular2/core', './like.component'], function(exports_1, conte
                     core_1.Component({
                         selector: 'tweet',
                         template: "\n    <div class=\"media mainTweetDiv\">\n        <a class=\"media-left\" href=\"#\">\n            <img class=\"media-object\" src=\"{{tweetData.ImageUrl}}\" alt=\"Generic placeholder image\">\n        </a>\n        <div class=\"media-body\">\n            <h4 class=\"media-heading\">\n                    {{ tweetData.Title }} <span class=\"tweetHandle\">{{ tweetData.Handle }}</span>\n            </h4>\n            {{tweetData.Body}}\n            <div>\n            <like [LikeCount]=\"tweetData.LikeCount\" [IsLike]=\"tweetData.IsLike\"></like>\n            </div>\n        </div>\n    </div>\n    ",
-                        styles: ["\n        .mainTweetDiv {\n            margin: 5 5 5 5;\n            padding: 5 5 5 5;\n        }\n        .tweetHandle {\n            color: #CCC;\n        }\n        "
+                        styles: ["\n        .mainTweetDiv {\n            margin: 5 5 5 5;\n            padding: 5 5 5 5;\n            width: 65%;\n        }\n        .tweetHandle {\n            color: #CCC;\n        }\n        "
                         ],
                         directives: [like_component_1.LikeComponent]
                     }), 

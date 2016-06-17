@@ -23,6 +23,7 @@ import {LikeComponent} from './like.component';
         .mainTweetDiv {
             margin: 5 5 5 5;
             padding: 5 5 5 5;
+            width: 65%;
         }
         .tweetHandle {
             color: #CCC;
